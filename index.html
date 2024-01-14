@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <p>hello, my name is vedant pahariya</p>
+    <h1 class="stylehead">
+        <span>P</span>ahariya
+        <span>C</span>omputers
+    </h1>
+    <!-- <h2 class="stylehead">Welcome to Pahariya Computers</h2> -->
+    <!-- <h3 class="stylehead">We are here to help you</h3> -->
+    
+    <div id="output"><span class="onestop">One Stop Solution </span>For&nbsp; <span class="changing-text" id="changingText"></span></div>
+  <script>
+    const changingTexts = ["all your tech needs!", "your Laptops", "your PCs"];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function typeChangingText() {
+      const changingTextElement = document.getElementById('changingText');
+      changingTextElement.textContent += changingTexts[textIndex][charIndex];
+      charIndex++;
+
+      if (charIndex === changingTexts[textIndex].length) {
+        clearInterval(changingTextInterval);
+        setTimeout(resetTyping, 1000);
+      }
+    }
+
+    function resetTyping() {
+      const changingTextElement = document.getElementById('changingText');
+      changingTextElement.style.opacity = 0;
+
+      charIndex = 0;
+      textIndex = (textIndex + 1) % changingTexts.length;
+
+      setTimeout(() => {
+        changingTextElement.textContent = '';
+        changingTextElement.style.opacity = 1;
+        changingTextInterval = setInterval(typeChangingText, 100);
+      }, 500);
+    }
+
+    let changingTextInterval = setInterval(typeChangingText, 100);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const cursorElement = document.getElementById('cursor');
+      cursorElement.style.display = 'inline-block';
+    });
+  </script>
+
 </body>
+
 </html>
