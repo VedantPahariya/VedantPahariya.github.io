@@ -7,9 +7,9 @@
 
 .stylehead {
     text-align: center;
-    font-size: 50px;
+    font-size: 4vw;
     font-family: 'Rubik', sans-serif;
-    margin: 0px;
+    margin: auto;
 }
 
 .stylehead span {
@@ -37,8 +37,9 @@
 
    #output {
     /* position: relative; */
+    font-size: 1.5vw;
     margin: auto;
-    width: 300px;
+    width: 30%;
     text-transform: capitalize;
     /* text-align: center; */
     /* justify-content: center; */
