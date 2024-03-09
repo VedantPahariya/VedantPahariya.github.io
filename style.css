@@ -7,9 +7,9 @@
 
 .animated-image {
   position: absolute;
-  /* top: 80%; */
-  left: 30%;
-  right: 25%;
+  top: calc(50vh - 45vmin);
+  left: calc(50vw - 45vmin);
+  /* right: 25%; */
   /* transform: translate(-50%, -50%); */
   width: 90vmin; /* Adjust size as needed */
   height: 90vmin; /* Adjust size as needed */
