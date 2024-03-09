@@ -5,50 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">
 
-     <!-- pre-configured link for the chatbot -->
+    <!-- pre-configured link for the chatbot -->
     <!-- <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script src="https://mediafiles.botpress.cloud/dc4ff08d-3e8a-4c8e-86d8-0025d62aa89f/webchat/config.js" defer></script> -->
 
 </head>
 
 <body>
-    <h1 class="stylehead">
-        <span>P</span>ahariya
-        <span>C</span>omputers
-    </h1>
-    <!-- <h2 class="stylehead">Welcome to Pahariya Computers</h2> -->
-    <!-- <h3 class="stylehead">We are here to help you</h3> -->
+    <!-- animation -->
+    <div class="animation-container animate__animated animate__zoomInUp">
+        <img src="../Images/logo.png" alt="Animated Image" class="animated-image">
+    </div>
+    <div id="content" style="opacity: 0;">
+
+        <h1 class="stylehead">
+            <span>P</span>ahariya
+            <span>C</span>omputers
+        </h1>
+        <!-- <h2 class="stylehead">Welcome to Pahariya Computers</h2> -->
+        <!-- <h3 class="stylehead">We are here to help you</h3> -->
+
+        <div id="output"><span class="onestop">One Stop Solution </span>For&nbsp; <span class="changing-text"
+                id="changingText"></span></div>
     
-    <div id="output"><span class="onestop">One Stop Solution </span>For&nbsp; <span class="changing-text" id="changingText"></span></div>
-    <script src="script.js"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
-        window.botpressWebChat.init({
-            "composerPlaceholder": "Chat with Pahariya Computers",
-            "botConversationDescription": "",
-            "botId": "dc4ff08d-3e8a-4c8e-86d8-0025d62aa89f",
-            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-            "messagingUrl": "https://messaging.botpress.cloud",
-            "clientId": "dc4ff08d-3e8a-4c8e-86d8-0025d62aa89f",
-            "webhookId": "aa70629f-8ea6-4b1c-a102-53b874648089",
-            "lazySocket": true,
-            "themeName": "prism",
-            "frontendVersion": "v1",
-            "showPoweredBy": true,
-            "theme": "prism",
-            "themeColor": "#dd0404",
-            "botName": "Pahariya Computers",
-            // "layoutWidth": "10px",
-            // "containerWidth": "700px",
-            "botConversationDescription": "Let's kick off our conversation with a warm hello!",
-            // "avatarUrl": "Images/logo.png",
-            "useSessionStorage": true,   // to not store the chat history after the session ends on closing the tab
-            "enablePersistHistory": false,
-            // "website": true,
-        });
-    </script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js" defer></script>
+    <script src="script.js" defer></script>
+</div>
 </body>
 </html>

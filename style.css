@@ -5,6 +5,43 @@
     font-family: 'Rubik', sans-serif;
 }
 
+.animated-image {
+  position: absolute;
+  /* top: 80%; */
+  left: 30%;
+  right: 25%;
+  /* transform: translate(-50%, -50%); */
+  width: 90vmin; /* Adjust size as needed */
+  height: 90vmin; /* Adjust size as needed */
+  /* transition: all 1s ease;  */
+  /* Smooth transition */
+  border-radius: 50%; /* To make it circular */
+}
+
+@keyframes image-animation {
+    from {
+        position: absolute;
+        /* top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        width: 90vmin; /* Adjust size as needed */
+        height: 90vmin; /* Adjust size as needed */
+        border-radius: 50%; /* To make it circular */
+    }
+    to {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        width: 9vmin; /* Adjust size as needed */
+        height: 9vmin; /* Adjust size as needed */
+        border-radius: 50%; /* To make it circular */
+    }
+}
+
+.animatze {
+  animation: image-animation 2s ease-in-out forwards; /* Apply animation */
+}
+
 .stylehead {
     text-align: center;
     font-size: 4vw;
