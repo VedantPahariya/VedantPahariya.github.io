@@ -42,6 +42,14 @@
   animation: image-animation 2s ease-in-out forwards; /* Apply animation */
 }
 
+.main_title{
+  display: flex;
+  flex-direction: column;
+  /* width: 70%;
+  margin: auto; */
+  /* align-items: center; */
+}
+
 .stylehead {
     text-align: center;
     font-size: min(6vw, 75px);
@@ -72,14 +80,12 @@
     }
   }
 
-   #output {
-    /* position: relative; */
+#output {
+    position: relative;
     font-size: min(2vw, 25px);
     margin: auto;
     width: 40%;
     text-transform: capitalize;
-    /* text-align: center; */
-    /* justify-content: center; */
   }
 
 
