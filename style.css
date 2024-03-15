@@ -84,7 +84,8 @@
     position: relative;
     font-size: min(2vw, 25px);
     margin: auto;
-    width: 40%;
+    left: 4vw;
+    width: 45%;
     text-transform: capitalize;
   }
 
