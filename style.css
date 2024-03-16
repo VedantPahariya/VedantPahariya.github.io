@@ -59,7 +59,7 @@
 
 .stylehead span {
     color: rgb(70, 116, 232);
-}
+  }
 
 .onestop{
     color: rgb(70, 116, 232);
@@ -89,10 +89,9 @@
   }
 
 /* Slide-Show */
- :root {
+ /* :root {
   --shadow: rgba(0, 0, 0, 0.8)
-}
-
+} */
 
 * {
   box-sizing: border-box;
