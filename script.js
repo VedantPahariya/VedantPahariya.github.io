@@ -92,7 +92,7 @@ let isDragging = false,
   currentIndex = 0;
 
 // Interval between slide transitions in milliseconds
-const interval = 6000; // 6 seconds
+const interval = 10000; // 6 seconds
 
 // Start the continuous slideshow
 startSlideshow();

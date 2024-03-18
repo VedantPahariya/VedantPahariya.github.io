@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
-* {
+body {
     background-color: rgb(204, 239, 239);
     font-family: 'Rubik', sans-serif;
 }
+
+/* Navigation bar */
+nav {
+  background-color: #001f3f; /* Navy blue dark */
+  /* width: 100%; */
+}
+
+nav ul {
+  list-style-type: none;
+  margin-left: 14vmin;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 2.5vmin 3vmin;
+  text-decoration: none;
+  border-radius: 20%;
+}
+
+nav ul li a:hover {
+  background-color: rgb(70, 116, 232);
+}
+/* Navigation Bar ends here */
 
 .animated-image {
   position: absolute;
@@ -20,7 +51,7 @@
 
 @keyframes image-animation {
     from {
-        position: absolute;
+        /* position: absolute; */
         /* top: 50%;
         left: 50%; */
         /* transform: translate(-50%, -50%); */
@@ -29,11 +60,12 @@
         border-radius: 50%; /* To make it circular */
     }
     to {
-        position: absolute;
-        top: 2%;
-        left: 2%;
-        width: 9vmin; /* Adjust size as needed */
-        height: 9vmin; /* Adjust size as needed */
+        /* position: absolute; */
+        top: 1vmin;
+        /* bottom: 50%; */
+        left: 2vmin;
+        width: 10vmin; /* Adjust size as needed */
+        height: 10vmin; /* Adjust size as needed */
         border-radius: 50%; /* To make it circular */
     }
 }
