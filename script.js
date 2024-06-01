@@ -228,3 +228,101 @@ function setSliderPosition() {
 }
 
 // Slide-Show Ends here
+
+
+// Product Showcase 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const products = [
+      {
+          name: 'Product 1',
+          price: '$19.99',
+          image: 'Images/poster.png',
+          warranty: '1 Year',
+          description: 'This is a great product that you will love!'
+      },
+      {
+          name: 'Product 2',
+          price: '$29.99',
+          image: 'Images/logo.png',
+          warranty: '2 Years',
+          description: 'This product is even better and offers more features.'
+      },
+      {
+          name: 'Product 3',
+          price: '$39.99',
+          image: 'https://via.placeholder.com/200',
+          warranty: '1 Year',
+          description: 'A reliable and affordable product for everyday use.'
+      },
+      {
+          name: 'Product 4',
+          price: '$49.99',
+          image: 'https://via.placeholder.com/200',
+          warranty: '3 Years',
+          description: 'Top quality product with exceptional durability.'
+      },
+      {
+          name: 'Product 5',
+          price: '$59.99',
+          image: 'https://via.placeholder.com/200',
+          warranty: '2 Years',
+          description: 'A premium product with top-notch features.'
+      },
+      {
+          name: 'Product 6',
+          price: '$69.99',
+          image: 'https://via.placeholder.com/200',
+          warranty: '1 Year',
+          description: 'Our best-selling product with great reviews.'
+      }
+  ];
+
+  const productGrid = document.getElementById('product-grid');
+  const modal = document.getElementById('product-modal');
+  const closeButton = document.getElementById('close-button');
+  const modalImage = document.getElementById('modal-image');
+  const modalName = document.getElementById('modal-name');
+  const modalPrice = document.getElementById('modal-price');
+  const modalWarranty = document.getElementById('modal-warranty');
+  const modalDescription = document.getElementById('modal-description');
+
+  products.forEach(product => {
+      const productCard = document.createElement('div');
+      productCard.classList.add('product-card');
+      
+      const discountPercentage = ((product.originalPrice - product.price) / product.originalPrice) * 100;
+      
+      productCard.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" class="product-image">
+          <div class="product-details">
+              <div class="product-name">${product.name}</div>
+              <div class="product-price">${product.price}</div> 
+
+          </div>
+      `;
+      
+      productCard.addEventListener('click', () => {
+          modalImage.src = product.image;
+          modalName.textContent = product.name;
+          modalPrice.textContent = `Price: ${product.price}`;
+          modalWarranty.textContent = `Warranty: ${product.warranty}`;
+          modalDescription.textContent = `Description: ${product.description}`;
+          modal.style.display = 'block';
+      });
+
+      productGrid.appendChild(productCard);
+  });
+
+  closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          modal.style.display = 'none';
+      }
+  });
+});
+
+// Product Showcase Ends here
