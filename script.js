@@ -235,16 +235,16 @@ function setSliderPosition() {
 document.addEventListener('DOMContentLoaded', function () {
   const products = [
       {
-          name: 'Product 1',
+          name: 'Hindware Snowcrest Arctic 90L Desert Air Cooler',
           price: '$19.99',
-          image: 'Images/poster.png',
+          image: 'Images/Products/HindArc90.png',
           warranty: '1 Year',
           description: 'This is a great product that you will love!'
       },
       {
           name: 'Product 2',
           price: '$29.99',
-          image: 'Images/logo.png',
+          image: 'https://via.placeholder.com/200',
           warranty: '2 Years',
           description: 'This product is even better and offers more features.'
       },
@@ -297,15 +297,17 @@ document.addEventListener('DOMContentLoaded', function () {
           <img src="${product.image}" alt="${product.name}" class="product-image">
           <div class="product-details">
               <div class="product-name">${product.name}</div>
-              <div class="product-price">${product.price}</div> 
+              
 
           </div>
       `;
-      
+      // <div class="product-price">${product.price}</div> 
+// add above line after product.name above to show the price
+  
       productCard.addEventListener('click', () => {
           modalImage.src = product.image;
           modalName.textContent = product.name;
-          modalPrice.textContent = `Price: ${product.price}`;
+          // modalPrice.textContent = `Price: ${product.price}`;
           modalWarranty.textContent = `Warranty: ${product.warranty}`;
           modalDescription.textContent = `Description: ${product.description}`;
           modal.style.display = 'block';
@@ -326,3 +328,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Product Showcase Ends here
+
+// Development Notice
+// Development Notice
+document.addEventListener('DOMContentLoaded', function() {
+  const devNotice = document.getElementById('devNotice');
+  let hasShown = false;
+  
+  // Initially hide the toast
+  devNotice.style.display = 'none';
+
+  // Handle close button click
+  document.querySelector('.toast-close').addEventListener('click', function() {
+      devNotice.style.animation = 'slideOut 0.5s ease-out';
+      setTimeout(() => {
+          devNotice.style.display = 'none';
+      }, 500);
+  });
+
+  // Throttled scroll handler
+  let ticking = false;
+  
+  window.addEventListener('scroll', function() {
+      if (!ticking && !hasShown) {
+          window.requestAnimationFrame(function() {
+              const windowHeight = window.innerHeight;
+              const documentHeight = document.documentElement.scrollHeight;
+              const scrollPosition = window.scrollY;
+              
+              // Show notice when user is near bottom (within 100px)
+              if ((windowHeight + scrollPosition) >= (documentHeight - 100)) {
+                  devNotice.style.display = 'flex';
+                  devNotice.style.animation = 'slideIn 0.5s ease-out';
+                  hasShown = true;
+              }
+              
+              ticking = false;
+          });
+          
+          ticking = true;
+      }
+  });
+});

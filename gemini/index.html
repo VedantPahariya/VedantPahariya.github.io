@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Code Showcase</title>
+    <style>
+        .image-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw; /* Adjust width as needed */
+    height: 50vh; /* Adjust height as needed */
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left {
+    transform: translateX(-50%);
+}
+
+.center {
+    transform: translateX(0);
+}
+
+.right {
+    transform: translateX(50%);
+}
+
+.active {
+    transform: translateX(0);
+}
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="../Images/logo.png" alt="Image 1" class="image left">
+        <img src="../Images/background.jpeg" alt="Image 2" class="image center active">
+        <img src="../Images/poster.png" alt="Image 3" class="image right">
+    </div>
+    <script>
+        const imageContainer = document.querySelector('.image-container');
+const images = document.querySelectorAll('.image');
+const activeClass = 'active';
+
+let currentImageIndex = 0;
+
+function slideImages() {
+  images.forEach(image => image.classList.remove(activeClass));
+
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  images[currentImageIndex].classList.add(activeClass);
+}
+
+setInterval(slideImages, 5000); // Change images every 5 seconds
+
+imageContainer.addEventListener('transitionend', () => {
+  if (images[currentImageIndex].classList.contains('left')) {
+    currentImageIndex = images.length - 1;
+    images[currentImageIndex].classList.add(activeClass);
+  } else if (images[currentImageIndex].classList.contains('right')) {
+    currentImageIndex = 0;
+    images[currentImageIndex].classList.add(activeClass);
+  }
+});
+    </script>
+</body>
+</html>

@@ -593,3 +593,74 @@ main{
 }
 
 /* Product Showcase Style Ends Here */
+
+/* Development Notice */
+
+/* .development-footer {
+  background-color: #001f3f; 
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+  font-family: 'Rubik', sans-serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.toast-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #001f3f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: none; /* Initially hidden */
+  align-items: center;
+  gap: 10px;
+  font-family: 'Rubik', sans-serif;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.toast-icon {
+  font-size: 1.2em;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 1.2em;
+}
+
+.toast-close:hover {
+  opacity: 0.8;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+}
