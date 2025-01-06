@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/VedantPahariya.github.io/',
   optimizeDeps: {
     include: ['lucide-react'], // Change from exclude to include
   },
